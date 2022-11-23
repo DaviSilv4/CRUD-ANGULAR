@@ -1,25 +1,23 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { CrudContainerComponent } from './components/crud.container.component';
+import { RouterModule, Routes} from '@angular/router';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import { Routes } from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
     component: CrudContainerComponent
-  }
+  },
 ];
 
 @NgModule({
   declarations: [
-    CrudContainerComponent
+    // CrudContainerComponent
   ],
   imports: [
     CommonModule,
-    MatToolbarModule
-  ],
+    RouterModule.forChild(routes)],
   providers: [],
   bootstrap: []
 })

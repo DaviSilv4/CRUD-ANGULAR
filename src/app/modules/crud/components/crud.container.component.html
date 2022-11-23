@@ -1,1 +1,26 @@
-alou
+<mat-card>
+  <mat-card-title>Teste</mat-card-title>
+  <div class="flex items-center">
+    <!-- <mat-form-field appearance="fill" class="mr-4">
+      <mat-label>teste</mat-label>
+      <input matInput>
+    </mat-form-field> -->
+    <mat-form-field appearance="fill">
+      <mat-label>Input</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="addItem()">Add</button>
+  </div>
+
+  <mat-list role="list">
+    <mat-list-item role="listitem">
+      <div class="flex item-center">
+        <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+      </div>
+    </mat-list-item>
+    <mat-list-item role="listitem">Item 2</mat-list-item>
+    <mat-list-item role="listitem">Item 3</mat-list-item>
+  </mat-list>
+</mat-card>
+
+{{ todoItems$ | async | json }}
